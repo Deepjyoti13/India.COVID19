@@ -1,0 +1,48 @@
+body {
+  overflow-x: hidden;
+}
+.header {
+  font-family: "Bree Serif", serif;
+}
+.why {
+  font-family: "Abril Fatface", cursive;
+}
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.columns {
+  margin: 10px;
+}
+.desc {
+  text-align: center;
+  padding: 35px;
+  margin: 10px;
+}
+p {
+  color: gray;
+}
+img {
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+  width: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .desc {
+    width: 100vw;
+    height: auto;
+  }
+  img {
+    width: 60vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+  .columns {
+    width: 100vw;
+    height: 100vh;
+    margin: 20vh;
+  }
+}

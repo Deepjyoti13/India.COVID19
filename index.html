@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Corona Updates</title>
+    <link
+      rel="icon"
+      href="http://pngimg.com/uploads/bacteria/bacteria_PNG24.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/1569692f69.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/nav.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css"
+      integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM="
+      crossorigin="anonymous"
+    />
+    <!-- js leaflet  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"
+      integrity="sha256-fNoRrwkP2GuYPbNSJmMJOCyfRB2DhPQe0rGTgzRsyso="
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font  -->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:700&display=swap" rel="stylesheet">
+    <!-- plotly js  -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-162022515-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-162022515-1");
+    </script>
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- navbar  -->
+    <nav>
+      <ul class="nav-links ">
+        <li>
+          <a href="index.html" style="margin-right: auto;"
+            ><img src="img/icon_germ.jpg" class="img" alt="corona" srcset=""
+          /></a>
+        </li>
+        <li><a style="cursor: none; color:transparent;">......</a></li>
+        <li><a style="cursor: none; color:transparent;">......</a></li>
+        <li><a style="cursor: none; color:transparent;">......</a></li>
+        <li><a style="cursor: none; color:transparent;">......</a></li>
+        <li><a style="cursor: none; color:transparent;">......</a></li>
+        <li><a style="cursor: none; color:transparent;">......</a></li>
+        <li>
+          <a href="https://covid.apollo247.com/">Coronavirus Risk Scan</a>
+        </li>
+        <li><a href="desktop_precautions.html">Precautions</a></li>
+        <li>
+          <a href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf"
+            >Helpline</a
+          >
+        </li>
+        <li><a href="desktop_mythbusters.html">Mythbuster</a></li>
+      </ul>
+      <div class="icon_mob">
+        <li style="margin-right: auto; list-style: none;">
+          <img src="img/icon_germ.jpg" class="img" alt="corona" srcset="" />
+        </li>
+      </div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <ul class="mob-nav-links text-dark">
+        <li>
+          <a href="https://covid.apollo247.com/ ">Coronavirus Risk Scan</a>
+        </li>
+        <li><a href="mobile_precautions.html">Precaution</a></li>
+        <li>
+          <a href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf"
+            >Helpline</a
+          >
+        </li>
+        <li><a href="mobile_mythbusters.html">Mythbuster</a></li>
+      </ul>
+    </nav>
+    <script src="js/app.js"></script>
+    <!-- title  -->
+    <div class="text-capitalize text-center ">
+      <h4><strong>coronavirus map</strong></h4>
+      <p><strong>click on the map to get the state wise details.</strong></p>
+    </div>
+    <!-- map  -->
+    <div id="map"></div>
+    <!-- total  -->
+    <!-- <div id="total" class="text-center "></div> -->
+    <div class="row">
+      <div class="column text-light">
+        <div class="card">
+          <h1>Confirmed</h1>
+          <h3 id="Confirmed"></h3>
+        </div>
+      </div>
+      <div class="column text-danger">
+        <div class="card">
+          <h1>Death</h1>
+          <h3 id="Death"></h3>
+        </div>
+      </div>
+      <div class="column text-success ">
+        <div class="card">
+          <h1>Recovered</h1>
+          <h3 id="Recovered"></h3>
+        </div>
+      </div>
+      <div class="column text-primary">
+        <div class="card">
+          <h1>
+            Last Updated
+          </h1>
+          <h3 id="Updated"></h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-capitalize text-center">
+      <h5>please scroll down</h5>
+      <strong><h3>coronavirus timeline</h3></strong>
+    </div>
+    <!-- dailyconfirmed -->
+    <div id="dailyconfirmed"></div>
+    <!-- dailydeceased -->
+    <div id="dailydeceased"></div>
+    <!-- dailyrecovered -->
+    <div id="dailyrecovered"></div>
+    <!-- totalconfirmed -->
+    <div id="totalconfirmed"></div>
+    <!-- table starts  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-capitalize">
+          <h1 class="text-center">
+            tabular format
+          </h1>
+          <h3 class="text-center ">
+            COVID-19 Statistics (India)
+          </h3>
+        </div>
+        <div id="no-more-tables">
+          <table
+            class="col-md-12 table-bordered table-striped table-condensed cf"
+            id="table"
+          >
+            <thead class="cf">
+              <tr>
+                <th>State / UT</th>
+                <th class="numeric">Confirmed Cases</th>
+                <th class="numeric">Death</th>
+                <th class="numeric">Cured/ Discharged/Migrated</th>
+                <th class="numeric">Last Updated</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- table ends  -->
+
+    <script src="js/table.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/graph.js"></script>
+    <footer>
+      <div class="container-fluid p-0">
+        <div class="row text-left">
+          <div class="col-md-5 col-md-5">
+            <h1 class="text-light">Thank You!</h1>
+            <p style="color: white">
+              Visit Computer Science and Engineering Department whenever you
+              visit
+              <a href="https://www.nita.ac.in/" style="color: #01FEED"
+                >NIT Agartala</a
+              >
+            </p>
+            <p class="pt-4 " style="color: white">
+              Copyright ©2020 All Rights Reserved  |  This Website is designed by
+              <span>Amitabha Majumder</span> & <span>Deepjyoti De</span>
+            </p>
+          </div>
+          <div class="col-md-5" id="CU">
+            <h4 class="text-light">Contact us</h4>
+            <p style="color: white">We are hearing you</p>
+            <h6 style="color: white">Our email ID:</h6>
+            <p style="color: white">amitabhamajumder2@gmail.com</p>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <h4 class="text-light">Acknowledgement</h4>
+            <p style="color: white">The data on this page are collected form</p>
+            <div class="column">
+              <a
+                href="https://www.mohfw.gov.in/index.html"
+                style="color: #01FEED"
+              >
+                www.mohfw.gov.in </a
+              ><br />
+              <a
+                href="https://github.com/CSSEGISandData/COVID-19"
+                style="color: #01FEED"
+              >
+                JHU CSSE </a
+              ><br />
+              <a
+                href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
+                style="color: #01FEED"
+              >
+                WHO</a
+              >
+              <br />
+              <a href="https://www.covid19india.org/" style="color: #01FEED"
+                >covid19india.org</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
